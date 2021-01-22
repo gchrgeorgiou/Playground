@@ -1,0 +1,112 @@
+<html>
+<head>
+    <script src="js/anychart-core.min.js"></script>
+    <script src="js/anychart-graph.min.js"></script>
+    <script src="js/anychart-data-adapter.min.js"></script>
+
+    <style type="text/css">
+        html, body, #container {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="menu">
+        <select name="cmbDiagram" id="cmbDiagram">
+            <option value="">Select Diagram</option>
+            <option value="data_images.json">Network Graph showing the IT Landscape - Mobile App Flow</option>
+            <option value="data_images2.json">Test Diagram 2</option>
+        </select>
+        <button id="loadMore" disabled>Load Data</button>
+    </div>
+    <div id="container">
+        
+    </div>
+    <script>
+        document.getElementById('cmbDiagram').onchange = function () {
+            var selVal = document.getElementById('cmbDiagram').value;   
+            if (selVal == "") {
+                document.getElementById("loadMore").disabled = true;
+            }
+            else {
+                document.getElementById("loadMore").disabled = false;
+            }
+
+        };
+       
+
+        document.getElementById("loadMore").onclick = function () {
+            document.getElementById("container").innerHTML = "";
+            
+            var selection = document.getElementById('cmbDiagram');           
+            var jsonpath = "data/" + selection.value;            
+            var chartTitle = selection.options[selection.selectedIndex].text;
+            
+            anychart.data.loadJsonFile(jsonpath, function (data) {
+
+                // create a chart from the loaded data
+                var chart = anychart.graph(data);
+
+                //set fixed layout and use xy coordinates for each node
+                chart.layout().type('fixed');
+
+                // set the title
+                chart.title(chartTitle);
+
+                // access nodes
+                var nodes = chart.nodes();
+                // set the size of nodes
+                nodes.normal().shape("rectangle");
+                nodes.normal().height("{%height}");
+                nodes.normal().width("{%width}");
+                //nodes.hovered().height(45);
+                //nodes.selected().height(45);
+
+                //set the size of the edges
+                chart.edges().normal().stroke("#cccccc", 2, "10 5", "round");
+                chart.edges().hovered().stroke("#663399", 4, "10 5", "rectangle");
+                chart.edges().selected().stroke("#663399", 4);
+
+                // set the stroke of nodes
+                nodes.normal().stroke(null);
+                nodes.hovered().stroke("#333333", 0);
+                nodes.selected().stroke("#cccccc", 1);
+
+                // enable the labels of nodes
+                chart.nodes().labels().enabled(true);
+
+                // configure the labels of nodes
+                chart.nodes().labels().format("{%id}\n{%ipaddress}");
+                chart.nodes().labels().fontSize(12);
+                chart.nodes().labels().fontWeight(600);
+
+                //enable the labels of the edges
+                chart.edges().labels().enabled(true);
+                // configure the labels of nodes
+                chart.edges().labels().format("{%protocol}-{%port}");
+                chart.edges().labels().fontSize(12);
+                chart.edges().labels().fontWeight(600);
+
+                //tooltips
+                // tooltip padding for all series on a chart
+                //chart.tooltip().padding().left(20);
+
+                // background color
+                chart.tooltip().background().fill("#663399");
+                nodes.tooltip().background().fill("black");
+
+
+                // draw the chart
+                //chart.rotation(180);
+                chart.layout().iterationCount(500);
+                chart.container("container").draw();
+                chart.fit();
+            });
+        };
+
+    </script>
+</body>
+</html>
