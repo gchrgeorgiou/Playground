@@ -1,125 +1,127 @@
 {
-  "nodes": [
-    {
-      "id": "1Bank Mobile App",
-      "x": 290,
-      "y": 80,
-      "ipaddress": "",
-      "height": 75,
-      "width": 75,
-      "group": "System of Engagement",
-      "fill": {
-        "src": "../img/mobileApp.png"
-      }
-    },
-    {
-      "id": "API Connect",
-      "x": 620,
-      "y": 80,
-      "ipaddress": "10.0.0.1",
-      "height": 50,
-      "width": 75,
-      "group": "Middleware",
-      "fill": {
-        "src": "../img/apigw.png"
-      }
-    },
-    {
-      "id": "Mobile BFF",
-      "x": 960,
-      "y": 80,
-      "ipaddress": "10.0.0.2",
-      "height": 75,
-      "width": 75,
-      "group": "Containers",
-      "fill": {
-        "src": "../img/bff.png"
-      }
-    },
-    {
-      "id": "Microservices Nodes",
-      "x": 665,
-      "y": 320,
-      "ipaddress": "10.0.0.3",
-      "height": 75,
-      "width": 75,
-      "group": "Containers",
-      "fill": {
-        "src": "../img/microservices.png"
-      }
-    },
-    {
-      "id": "1Bank App Server",
-      "x": 1200,
-      "y": 320,
-      "ipaddress": "10.0.0.4",
-      "height": 75,
-      "width": 75,
-      "group": "System of Record",
-      "fill": {
-        "src": "../img/server.png"
-      }
-    },
-    {
-      "id": "IIB",
-      "x": 960,
-      "y": 370,
-      "ipaddress": "10.0.0.5",
-      "height": 75,
-      "width": 75,
-      "group": "Middleware",
-      "fill": {
-        "src": "../img/iib.svg"
-      }
-    },
-    {
-      "id": "EQUATION",
-      "x": 740,
-      "y": 690,
-      "ipaddress": "10.0.0.6",
-      "height": 75,
-      "width": 75,
-      "group": "System of Record",
-      "fill": {
-        "src": "../img/core.png"
-      }
-    },
-    {
-      "id": "Cards (HPS)",
-      "x": 980,
-      "y": 760,
-      "ipaddress": "10.0.0.7",
-      "height": 75,
-      "width": 75,
-      "group": "System of Record",
-      "fill": {
-        "src": "../img/cards.png"
-      }
-    },
-    {
-      "id": "Payments (Dovetail)",
-      "x": 540,
-      "y": 590,
-      "ipaddress": "10.0.0.8",
-      "height": 50,
-      "width": 75,
-      "group": "System of Record",
-      "fill": {
-        "src": "../img/server.png"
-      }
-    },
-    {
-      "id": "BPM",
-      "x": 1260,
-      "y": 690,
-      "ipaddress": "10.0.0.9",
-      "height": 75,
-      "width": 75,
-      "group": "Middleware",
-      "fill": {
-        "src": "../img/server.png"
-      }
-    },
+   
+    
+    "nodes": [
+      {
+        "id": "1Bank Mobile App",
+        "x": 290,
+        "y": 80,
+        "ipaddress": "",
+        "height": 75,
+        "width": 75,
+        "group": "System of Engagement",
+        "fill": {
+          "src": "../img/mobileApp.png"
+        }
+      },
+      {
+        "id": "API Connect",
+        "x": 620,
+        "y": 80,
+        "ipaddress": "10.0.0.1",
+        "height": 50,
+        "width": 75,
+        "group": "Middleware",
+        "fill": {
+          "src": "../img/apigw.png"
+        }
+      },
+      {
+        "id": "Mobile BFF",
+        "x": 960,
+        "y": 80,
+        "ipaddress": "10.0.0.2",
+        "height": 75,
+        "width": 75,
+        "group": "Containers",
+        "fill": {
+          "src": "../img/bff.png"
+        }
+      },
+      {
+        "id": "Microservices Nodes",
+        "x": 665,
+        "y": 320,
+        "ipaddress": "10.0.0.3",
+        "height": 75,
+        "width": 75,
+        "group": "Containers",
+        "fill": {
+          "src": "../img/microservices.png"
+        }
+      },
+      {
+        "id": "1Bank App Server",
+        "x": 1200,
+        "y": 320,
+        "ipaddress": "10.0.0.4",
+        "height": 75,
+        "width": 75,
+        "group": "System of Record",
+        "fill": {
+          "src": "../img/server.png"
+        }
+      },
+      {
+        "id": "IIB",
+        "x": 960,
+        "y": 370,
+        "ipaddress": "10.0.0.5",
+        "height": 75,
+        "width": 75,
+        "group": "Middleware",
+        "fill": {
+          "src": "../img/iib.svg"
+        }
+      },
+      {
+        "id": "EQUATION",
+        "x": 740,
+        "y": 690,
+        "ipaddress": "10.0.0.6",
+        "height": 75,
+        "width": 75,
+        "group": "System of Record",
+        "fill": {
+          "src": "../img/core.png"
+        }
+      },
+      {
+        "id": "Cards (HPS)",
+        "x": 980,
+        "y": 760,
+        "ipaddress": "10.0.0.7",
+        "height": 75,
+        "width": 75,
+        "group": "System of Record",
+        "fill": {
+          "src": "../img/cards.png"
+        }
+      },
+      {
+        "id": "Payments (Dovetail)",
+        "x": 540,
+        "y": 590,
+        "ipaddress": "10.0.0.8",
+        "height": 50,
+        "width": 75,
+        "group": "System of Record",
+        "fill": {
+          "src": "../img/server.png"
+        }
+      },
+      {
+        "id": "BPM",
+        "x": 1260,
+        "y": 690,
+        "ipaddress": "10.0.0.9",
+        "height": 75,
+        "width": 75,
+        "group": "Middleware",
+        "fill": {
+          "src": "../img/server.png"
+        }
+      },
       {
         "id": "MongoDB",
         "x": 350,
@@ -131,69 +133,71 @@
         "fill": {
           "src": "../img/mongo.png"
         }
-      }    
-  ],
-  "edges": [
-    {
-      "from": "1Bank Mobile App",
-      "to": "API Connect",
-      "protocol": "https",
-      "port": "443"
-    },
-    {
-      "from": "API Connect",
-      "to": "Mobile BFF",
-      "protocol": "https",
-      "port": "443"
-    },
-    {
-      "from": "Mobile BFF",
-      "to": "Microservices Nodes",
-      "protocol": "https",
-      "port": "443"
-    },
-    {
-      "from": "Microservices Nodes",
-      "to": "MongoDB",
-      "protocol": "https",
-      "port": "443"
-    },
-    {
-      "from": "Mobile BFF",
-      "to": "1Bank App Server",
-      "protocol": "https",
-      "port": "443"
-    },
-    {
-      "from": "1Bank App Server",
-      "to": "IIB",
-      "protocol": "MQ",
-      "port": "423"
-    },
-    {
-      "from": "IIB",
-      "to": "EQUATION",
-      "protocol": "MQ",
-      "port": "521"
-    },
-    {
-      "from": "IIB",
-      "to": "Cards (HPS)",
-      "protocol": "JDBC",
-      "port": "1443"
-    },
-    {
-      "from": "IIB",
-      "to": "Payments (Dovetail)",
-      "protocol": "MQ",
-      "port": "421"
-    },
-    {
-      "from": "IIB",
-      "to": "BPM",
-      "protocol": "MQ",
-      "port": "421"
+      }
+    ],
+    "edges": [
+      {
+        "from": "1Bank Mobile App",
+        "to": "API Connect",
+        "protocol": "https",
+        "port": "443"
+      },
+      {
+        "from": "API Connect",
+        "to": "Mobile BFF",
+        "protocol": "https",
+        "port": "443"
+      },
+      {
+        "from": "Mobile BFF",
+        "to": "Microservices Nodes",
+        "protocol": "https",
+        "port": "443"
+      },
+      {
+        "from": "Microservices Nodes",
+        "to": "MongoDB",
+        "protocol": "https",
+        "port": "443"
+      },
+      {
+        "from": "Mobile BFF",
+        "to": "1Bank App Server",
+        "protocol": "https",
+        "port": "443"
+      },
+      {
+        "from": "1Bank App Server",
+        "to": "IIB",
+        "protocol": "MQ",
+        "port": "423"
+      },
+      {
+        "from": "IIB",
+        "to": "EQUATION",
+        "protocol": "MQ",
+        "port": "521"
+      },
+      {
+        "from": "IIB",
+        "to": "Cards (HPS)",
+        "protocol": "JDBC",
+        "port": "1443"
+      },
+      {
+        "from": "IIB",
+        "to": "Payments (Dovetail)",
+        "protocol": "MQ",
+        "port": "421"
+      },
+      {
+        "from": "IIB",
+        "to": "BPM",
+        "protocol": "MQ",
+        "port": "421"
 
-    }
-  ]
+      }
+    ]
+
+ 
 }
