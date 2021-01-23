@@ -1,0 +1,337 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "title": "Build your diagram",
+  "description": "The root schema comprises the entire diagram in JSON format",
+  "default": {},
+  "examples": [
+    {
+      "nodes": [
+        {
+          "id": "1Bank Mobile App",
+          "x": 290,
+          "y": 80,
+          "ipaddress": "",
+          "height": 75,
+          "width": 75,
+          "group": "System of Engagement",
+          "fill": {
+            "src": "../img/mobileApp.png"
+          }
+        },
+        {
+          "id": "API Connect",
+          "x": 620,
+          "y": 80,
+          "ipaddress": "10.0.0.1",
+          "height": 50,
+          "width": 75,
+          "group": "Middleware",
+          "fill": {
+            "src": "../img/apigw.png"
+          }
+
+        },
+        {
+          "id": "MongoDB",
+          "x": 350,
+          "y": 360,
+          "ipaddress": "10.1.0.9",
+          "height": 50,
+          "width": 50,
+          "group": "Database",
+          "fill": {
+            "src": "../img/mongo.png"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "from": "1Bank Mobile App",
+          "to": "API Connect",
+          "protocol": "https",
+          "port": "443"
+        },
+        {
+          "from": "API Connect",
+          "to": "Mobile BFF",
+          "protocol": "https",
+          "port": "443"
+        }
+      ]
+    }
+  ],
+  "required": [
+    "nodes",
+    "edges"
+  ],
+  "properties": {
+    "nodes": {
+      "$id": "#/properties/nodes",
+      "type": "array",
+      "title": "The nodes",
+      "description": "Define Nodes for your diagram",
+      "default": [],
+      "examples": [
+        [
+          {
+            "id": "1Bank Mobile App",
+            "x": 290,
+            "y": 80,
+            "ipaddress": "",
+            "height": 75,
+            "width": 75,
+            "group": "System of Engagement",
+            "fill": {
+              "src": "../img/mobileApp.png"
+            }
+          },
+          {
+            "id": "API Connect",
+            "x": 620,
+            "y": 80,
+            "ipaddress": "10.0.0.1",
+            "height": 50,
+            "width": 75,
+            "group": "Middleware",
+            "fill": {
+              "src": "../img/apigw.png"
+            }
+          }
+        ]
+      ],
+      "additionalItems": true,
+      "items": {
+        "$id": "#/properties/nodes/items",
+        "anyOf": [
+          {
+            "$id": "#/properties/nodes/items/anyOf/0",
+            "type": "object",
+            "title": "Node",
+            "description": "A node in your diagram",
+            "default": {},
+            "examples": [
+              {
+                "id": "1Bank Mobile App",
+                "x": 290,
+                "y": 80,
+                "ipaddress": "",
+                "height": 75,
+                "width": 75,
+                "group": "System of Engagement",
+                "fill": {
+                  "src": "../img/mobileApp.png"
+                }
+              }
+            ],
+            "required": [
+              "id",
+              "x",
+              "y",
+              "ipaddress",
+              "height",
+              "width",
+              "group",
+              "fill"
+            ],
+            "properties": {
+              "id": {
+                "$id": "#/properties/nodes/items/anyOf/0/properties/id",
+                "type": "string",
+                "title": "Node Id",
+                "description": "The name of your node",
+                "default": "",
+                "examples": [
+                  "1Bank Mobile App"
+                ]
+              },
+              "x": {
+                "$id": "#/properties/nodes/items/anyOf/0/properties/x",
+                "type": "integer",
+                "title": "The x schema",
+                "description": "Optionally set the x coordinate of the node",
+                "default": 0,
+                "examples": [
+                  290
+                ]
+              },
+              "y": {
+                "$id": "#/properties/nodes/items/anyOf/0/properties/y",
+                "type": "integer",
+                "title": "Y coordinate",
+                "description": "Optionally set the y coordinate of the node",
+                "default": 0,
+                "examples": [
+                  80
+                ]
+              },
+              "ipaddress": {
+                "$id": "#/properties/nodes/items/anyOf/0/properties/ipaddress",
+                "type": "string",
+                "title": "IP Address",
+                "description": "IP address of node (if any)",
+                "default": "",
+                "examples": [
+                  ""
+                ]
+              },
+              "height": {
+                "$id": "#/properties/nodes/items/anyOf/0/properties/height",
+                "type": "integer",
+                "title": "Height",
+                "description": "Define the height in pixels",
+                "default": 0,
+                "examples": [
+                  75
+                ]
+              },
+              "width": {
+                "$id": "#/properties/nodes/items/anyOf/0/properties/width",
+                "type": "integer",
+                "title": "Width",
+                "description": "Define the width in pixels",
+                "default": 0,
+                "examples": [
+                  75
+                ]
+              },
+              "group": {
+                "$id": "#/properties/nodes/items/anyOf/0/properties/group",
+                "type": "string",
+                "title": "Group",
+                "description": "The group that this node belongs to",
+                "default": "",
+                "examples": [
+                  "System of Engagement"
+                ]
+              },
+              "fill": {
+                "$id": "#/properties/nodes/items/anyOf/0/properties/fill",
+                "type": "object",
+                "title": "Fill method",
+                "description": "Define the image to show",
+                "default": {},
+                "examples": [
+                  {
+                    "src": "../img/mobileApp.png"
+                  }
+                ],
+                "required": [
+                  "src"
+                ],
+                "properties": {
+                  "src": {
+                    "$id": "#/properties/nodes/items/anyOf/0/properties/fill/properties/src",
+                    "type": "string",
+                    "title": "Icon path",
+                    "description": "Enter the icon path for this node",
+                    "default": "",
+                    "examples": [
+                      "../img/mobileApp.png"
+                    ]
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "additionalProperties": false
+          }
+        ]
+      }
+    },
+    "edges": {
+      "$id": "#/properties/edges",
+      "type": "array",
+      "title": "The connections",
+      "description": "Define connections for your diagram",
+      "default": [],
+      "examples": [
+        [
+          {
+            "from": "1Bank Mobile App",
+            "to": "API Connect",
+            "protocol": "https",
+            "port": "443"
+          },
+          {
+            "from": "API Connect",
+            "to": "Mobile BFF",
+            "protocol": "https",
+            "port": "443"
+          }
+        ]
+      ],
+      "additionalItems": true,
+      "items": {
+        "$id": "#/properties/edges/items",
+        "anyOf": [
+          {
+            "$id": "#/properties/edges/items/anyOf/0",
+            "type": "object",
+            "title": "Edge",
+            "description": "Add a new connection between two nodes",
+            "default": {},
+            "examples": [
+              {
+                "from": "1Bank Mobile App",
+                "to": "API Connect",
+                "protocol": "https",
+                "port": "443"
+              }
+            ],
+            "required": [
+              "from",
+              "to",
+              "protocol",
+              "port"
+            ],
+            "properties": {
+              "from": {
+                "$id": "#/properties/edges/items/anyOf/0/properties/from",
+                "type": "string",
+                "title": "Source Node",
+                "description": "Enter the source node for this connection",
+                "default": "",
+                "examples": [
+                  "1Bank Mobile App"
+                ]
+              },
+              "to": {
+                "$id": "#/properties/edges/items/anyOf/0/properties/to",
+                "type": "string",
+                "title": "Target Node",
+                "description": "Enter the target node for this connection",
+                "default": "",
+                "examples": [
+                  "API Connect"
+                ]
+              },
+              "protocol": {
+                "$id": "#/properties/edges/items/anyOf/0/properties/protocol",
+                "type": "string",
+                "title": "Protocol",
+                "description": "Choose Protocol for this connection",
+                "default": "",
+                "examples": [
+                  "https"
+                ]
+              },
+              "port": {
+                "$id": "#/properties/edges/items/anyOf/0/properties/port",
+                "type": "string",
+                "title": "Port",
+                "description": "Enter the port number for this conncetion",
+                "default": "",
+                "examples": [
+                  "443"
+                ]
+              }
+            },
+            "additionalProperties": false
+          }
+        ]
+      }
+    }
+  }
+}
