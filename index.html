@@ -1,244 +1,200 @@
-﻿<!doctype html>
+﻿<!DOCTYPE html>
 <html lang="en">
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Dashboard - DaaS</title>
+        <link href="css/styles.css" rel="stylesheet" />
+        <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js" crossorigin="anonymous"></script>
+    </head>
+    <body class="sb-nav-fixed">
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+            <a class="navbar-brand" href="index.html">Diagram As A Service</a>
+            <button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i class="fas fa-bars"></i></button>
+            <!-- Navbar Search-->
+            <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
+                <div class="input-group">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="Content/bootstrap.min.css">
-    <link rel="stylesheet" href="Content/style.css">
-    <title>Diagram as a Service</title>
-</head>
-<body>
-    <div class="container">
-        
 
+                </div>
+            </form>
+            <!-- Navbar-->
+            <ul class="navbar-nav ml-auto ml-md-0">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                        <a class="dropdown-item" href="#">Settings</a>
+                        <a class="dropdown-item" href="#">Activity Log</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="login.html">Logout</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+                            <div class="sb-sidenav-menu-heading">Core</div>
+                            <a class="nav-link" href="index.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                Playground
+                            </a>                                                        
+                        </div>
+                    </div>
+                    <div class="sb-sidenav-footer">
+                        <div class="small">Logged in as:</div>
+                        Test User
+                    </div>
+                </nav>
+            </div>
+            <div id="layoutSidenav_content">
+                <main>
+                    <div class="container-fluid">
+                        <h1 class="mt-4">DaaS Playground</h1>
+                        <ol class="breadcrumb mb-4">                                                        
+                            <li class="breadcrumb-item active">Playground</li>
+                        </ol>
 
-
-        <h1>Welcome to DaaS</h1>
-
-        <ul class="nav nav-tabs nav-fill mb-3" role="tablist">
-            <li class="active"><a data-toggle="tab" class="btn btn-primary" href="#home">Interactive</a></li>
-            <li><a data-toggle="tab" href="#menu1" class="btn btn-secondary">Load from Saved</a></li>
-        </ul>
-
-        <div class="tab-content">
-            <div id="home" class="tab-pane fade in active">
-                <h3>Interactive</h3>
-                <p>
-                    <div class="accordion" id="accordionExample">
-                        <div class="card">
-                            <div class="card-header" id="headingOne">
-                                <h2 class="mb-0">
-                                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        Step 1:Upload your data (json format)
-                                    </button>
-                                </h2>
+                        <div class="row">
+                            <div class="col-xl-6">
+                                <div class="card mb-4">
+                                    <div class="card-header">
+                                        <i class="fas fa-chart-area mr-1"></i>
+                                        Pick your saved diagram
+                                    </div>
+                                    <div class="card-body">
+                                        <select name="cmbDiagram" id="cmbDiagram">
+                                            <option value="">Select Diagram</option>
+                                            <option value="data_images.json">Network Graph showing the IT Landscape - Mobile App Flow</option>
+                                            <option value="data_images2.json">Test Diagram 2</option>
+                                        </select>
+                                        <button id="loadMore" disabled class="btn btn-outline-dark">Load Saved Diagram</button>
+                                    </div>
+                                </div>
                             </div>
 
-                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                                <div class="card-body">
-                                    <input type="file" id="selectFiles" value="Import" />
+                            <div class="col-xl-6">
+                                <div class="card mb-4">
+                                    <div class="card-header">
+                                        <i class="fas fa-chart-bar mr-1"></i>
+                                        Interactive
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="accordion" id="accordionExample">
+                                            <div class="card">
+                                                <div class="card-header" id="headingOne">
+                                                    <h2 class="mb-0">
+                                                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                            Step 1:Upload your data (json format)
+                                                        </button>
+                                                    </h2>
+                                                </div>
+
+                                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                                    <div class="card-body">
+                                                        <input type="file" id="selectFiles" value="Import" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card">
+                                                <div class="card-header" id="headingThree">
+                                                    <h2 class="mb-0">
+                                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                            Step 2: Preview your data
+                                                        </button>
+                                                    </h2>
+                                                </div>
+                                                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                                                    <div class="card-body">
+                                                        <button id="import" class="btn btn-outline-dark">Show data from file</button><button id="importDemo" class="btn btn-outline-dark">Demo Data</button><br /><br />
+                                                        <textarea id="result" class="form-control" rows="10" style="height:100%;width:100%"></textarea><br />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card">
+                                                <div class="card-header" id="headingTwo">
+                                                    <h2 class="mb-0">
+                                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                            Step 3:Give your diagram a title
+                                                        </button>
+                                                    </h2>
+                                                </div>
+                                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                                                    <div class="card-body">
+                                                        <input type="text" id="customChartTitle" class="form-control" placeholder="Enter Chart Title Here" /><br />
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="card">
+                                                <div class="card-header" id="headingThree">
+                                                    <h2 class="mb-0">
+                                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                                            Step 4:Try it out!
+                                                        </button>
+                                                    </h2>
+                                                </div>
+                                                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                                                    <div class="card-body">
+                                                        <button class="btn btn-outline-dark" id="loadMore2" disabled>Show</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="card">
-                            <div class="card-header" id="headingThree">
-                                <h2 class="mb-0">
-                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                        Step 2: Preview your data
-                                    </button>
-                                </h2>
-                            </div>
-                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                                <div class="card-body">
-                                    <button id="import" class="btn btn-outline-dark">Show my data</button><br /><br />
-                                    <textarea id="result" class="form-control" rows="10" style="height:100%;width:100%"></textarea><br />
+                        <div class="row" style="height:768px">
+                            <div class="card" style="width:100%;height:100%">
+                                <div class="card-header">
+                                    <i class="fas fa-table mr-1"></i>
+                                    Diagram
                                 </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header" id="headingTwo">
-                                <h2 class="mb-0">
-                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        Step 3:Give your diagram a title
-                                    </button>
-                                </h2>
-                            </div>
-                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                                <div class="card-body">
-                                    <input type="text" id="customChartTitle" class="form-control" placeholder="Enter Chart Title Here" /><br />
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card">
-                            <div class="card-header" id="headingThree">
-                                <h2 class="mb-0">
-                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                        Step 4:Try it out!
-                                    </button>
-                                </h2>
-                            </div>
-                            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
-                                <div class="card-body">
-                                    <button class="btn btn-outline-dark" id="loadMore2" disabled>Show</button>
+                                <div  id="graphplaceholder" style="width:100%;height:100%">
+                                    
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                </p>
-            </div>
-            <div id="menu1" class="tab-pane fade">
-                <h3>Load from Saved</h3>
-                <p>
-                    <select name="cmbDiagram" id="cmbDiagram">
-                        <option value="">Select Diagram</option>
-                        <option value="data_images.json">Network Graph showing the IT Landscape - Mobile App Flow</option>
-                        <option value="data_images2.json">Test Diagram 2</option>
-                    </select>
-                    <button id="loadMore" disabled class="btn btn-outline-dark">Load Saved Diagram</button>
-                </p>
+                </main>
+                <footer class="py-4 bg-light mt-auto">
+                    <div class="container-fluid">
+                        <div class="d-flex align-items-center justify-content-between small">
+                            <div class="text-muted">Copyright &copy; DaaS 2021</div>
+                            <div>
+                                <a href="#">Privacy Policy</a>
+                                &middot;
+                                <a href="#">Terms &amp; Conditions</a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
             </div>
         </div>
+        <script src="Scripts/anychart-core.min.js"></script>
+        <script src="Scripts/anychart-graph.min.js"></script>
+        <script src="Scripts/anychart-data-adapter.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="js/scripts.js"></script>
+        <script src="js/index.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
+        <script src="assets/demo/datatables-demo.js"></script>
 
-    </div>
-    <div></div>
-    <hr />
-    <div id="graphplaceholder"></div>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="Scripts/jquery-3.5.1.slim.min.js"></script>
-    <script src="Scripts/popper.min.js"></script>
-    <script src="Scripts/bootstrap.min.js"></script>
-    <script src="Scripts/anychart-core.min.js"></script>
-    <script src="Scripts/anychart-graph.min.js"></script>
-    <script src="Scripts/anychart-data-adapter.min.js"></script>
-    <script>
+        <script>
 
+          
+        </script>
 
-
-
-        document.getElementById('import').onclick = function () {
-            document.getElementById("graphplaceholder").innerHTML = "";
-            var files = document.getElementById('selectFiles').files;
-
-            if (files.length <= 0) {
-                return false;
-            }
-
-            var fr = new FileReader();
-
-            fr.onload = function (e) {
-                var result = JSON.parse(e.target.result);
-                var formatted = JSON.stringify(result, null, 2);
-                document.getElementById('result').value = formatted;
-            }
-            fr.readAsText(files.item(0));
-            document.getElementById("loadMore2").disabled = false;
-        };
-
-
-
-        document.getElementById("loadMore2").onclick = function () {
-            document.getElementById("graphplaceholder").innerHTML = "";
-            var chartTitle = document.getElementById("customChartTitle").value;
-            var formatted = document.getElementById('result').value;
-            var obj = JSON.parse(formatted);
-            drawChart(chartTitle, obj);
-        };
-
-
-        document.getElementById('cmbDiagram').onchange = function () {
-            var selVal = document.getElementById('cmbDiagram').value;
-            if (selVal == "") {
-                document.getElementById("loadMore").disabled = true;
-            }
-            else {
-                document.getElementById("loadMore").disabled = false;
-            }
-
-        };
-
-
-        document.getElementById("loadMore").onclick = function () {
-            document.getElementById("graphplaceholder").innerHTML = "";
-            var selection = document.getElementById('cmbDiagram');
-            var jsonpath = "data/" + selection.value;
-            var chartTitle = selection.options[selection.selectedIndex].text;
-
-            anychart.data.loadJsonFile(jsonpath, function (data) {
-                //console.log(data);
-                drawChart(chartTitle, data);
-            });
-        };
-
-
-
-
-        function drawChart(chartTitle, JsonData) {
-            console.log("You are in with:" + JsonData);
-            // create a chart from the loaded data
-            var chart = anychart.graph(JsonData);
-
-            //set fixed layout and use xy coordinates for each node
-            chart.layout().type('fixed');
-
-            // set the title
-            chart.title(chartTitle);
-
-            // access nodes
-            var nodes = chart.nodes();
-            // set the size of nodes
-            nodes.normal().shape("rectangle");
-            nodes.normal().height("{%height}");
-            nodes.normal().width("{%width}");
-            //nodes.hovered().height(45);
-            //nodes.selected().height(45);
-
-            //set the size of the edges
-            chart.edges().normal().stroke("#cccccc", 2, "10 5", "round");
-            chart.edges().hovered().stroke("#663399", 4, "10 5", "rectangle");
-            chart.edges().selected().stroke("#663399", 4);
-
-            // set the stroke of nodes
-            nodes.normal().stroke(null);
-            nodes.hovered().stroke("#333333", 0);
-            nodes.selected().stroke("#cccccc", 1);
-
-            // enable the labels of nodes
-            chart.nodes().labels().enabled(true);
-
-            // configure the labels of nodes
-            chart.nodes().labels().format("{%id}\n{%ipaddress}");
-            chart.nodes().labels().fontSize(12);
-            chart.nodes().labels().fontWeight(600);
-
-            //enable the labels of the edges
-            chart.edges().labels().enabled(true);
-            // configure the labels of nodes
-            chart.edges().labels().format("{%protocol}-{%port}");
-            chart.edges().labels().fontSize(12);
-            chart.edges().labels().fontWeight(600);
-
-            //tooltips
-            // tooltip padding for all series on a chart
-            //chart.tooltip().padding().left(20);
-
-            // background color
-            chart.tooltip().background().fill("#663399");
-            nodes.tooltip().background().fill("black");
-
-
-            // draw the chart
-            //chart.rotation(180);
-            chart.layout().iterationCount(500);
-            chart.container("graphplaceholder").draw();
-            chart.fit();
-
-        };
-    </script>
-</body>
+    </body>
 </html>

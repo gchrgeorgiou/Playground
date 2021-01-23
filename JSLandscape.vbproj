@@ -94,6 +94,15 @@
     <Import Include="System.Web.UI.HtmlControls" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="401.html" />
+    <Content Include="404.html" />
+    <Content Include="500.html" />
+    <Content Include="assets\demo\chart-area-demo.js" />
+    <Content Include="assets\demo\chart-bar-demo.js" />
+    <Content Include="assets\demo\chart-pie-demo.js" />
+    <Content Include="assets\demo\datatables-demo.js" />
+    <Content Include="assets\img\error-404-monochrome.svg" />
+    <Content Include="charts.html" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-reboot.css" />
@@ -101,10 +110,17 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\style.css" />
+    <Content Include="css\styles.css" />
     <Content Include="img\mongo.png" />
     <Content Include="backup.html" />
+    <Content Include="index3.html" />
     <Content Include="index.html" />
+    <Content Include="index2.html" />
     <Content Include="interactive.html" />
+    <Content Include="js\index.js" />
+    <Content Include="js\scripts.js" />
+    <Content Include="layout-sidenav-light.html" />
+    <Content Include="layout-static.html" />
     <Content Include="loadfromJsonFile.html" />
     <Content Include="embeddedData.html" />
     <Content Include="img\10042-icon-service-API-Management-Services.svg" />
@@ -118,6 +134,9 @@
     <Content Include="img\microservices.png" />
     <Content Include="img\mobileApp.png" />
     <Content Include="img\server.png" />
+    <Content Include="login.html" />
+    <Content Include="password.html" />
+    <Content Include="register.html" />
     <Content Include="Scripts\anychart-core.min.js" />
     <Content Include="Scripts\anychart-data-adapter.min.js" />
     <Content Include="Scripts\anychart-graph.min.js" />
@@ -220,6 +239,7 @@
     <Content Include="Scripts\umd\popper-utils.min.js" />
     <Content Include="Scripts\umd\popper.js" />
     <Content Include="Scripts\umd\popper.min.js" />
+    <Content Include="tables.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
