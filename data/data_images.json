@@ -3,7 +3,7 @@
     
     "nodes": [
       {
-        "id": "1Bank Mobile App",
+        "id": "Mobile App",
         "x": 290,
         "y": 80,
         "ipaddress": "",
@@ -15,7 +15,7 @@
         }
       },
       {
-        "id": "API Connect",
+        "id": "API Gateway",
         "x": 620,
         "y": 80,
         "ipaddress": "10.0.0.1",
@@ -51,7 +51,7 @@
         }
       },
       {
-        "id": "1Bank App Server",
+        "id": "App Server",
         "x": 1200,
         "y": 320,
         "ipaddress": "10.0.0.4",
@@ -87,7 +87,7 @@
         }
       },
       {
-        "id": "Cards (HPS)",
+        "id": "Cards",
         "x": 980,
         "y": 760,
         "ipaddress": "10.0.0.7",
@@ -99,7 +99,7 @@
         }
       },
       {
-        "id": "Payments (Dovetail)",
+        "id": "Payments ",
         "x": 540,
         "y": 590,
         "ipaddress": "10.0.0.8",
@@ -137,13 +137,13 @@
     ],
     "edges": [
       {
-        "from": "1Bank Mobile App",
-        "to": "API Connect",
+        "from": "Mobile App",
+        "to": "API Gateway",
         "protocol": "https",
         "port": "443"
       },
       {
-        "from": "API Connect",
+        "from": "API Gateway",
         "to": "Mobile BFF",
         "protocol": "https",
         "port": "443"
@@ -162,12 +162,12 @@
       },
       {
         "from": "Mobile BFF",
-        "to": "1Bank App Server",
+        "to": "App Server",
         "protocol": "https",
         "port": "443"
       },
       {
-        "from": "1Bank App Server",
+        "from": "App Server",
         "to": "IIB",
         "protocol": "MQ",
         "port": "423"
@@ -180,13 +180,13 @@
       },
       {
         "from": "IIB",
-        "to": "Cards (HPS)",
+        "to": "Cards",
         "protocol": "JDBC",
         "port": "1443"
       },
       {
         "from": "IIB",
-        "to": "Payments (Dovetail)",
+        "to": "Payments ",
         "protocol": "MQ",
         "port": "421"
       },

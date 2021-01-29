@@ -24,7 +24,7 @@ document.getElementById('importDemo').onclick = function () {
     var result = {
         "nodes": [
             {
-                "id": "1Bank Mobile App",
+                "id": "Mobile App",
                 "x": 290,
                 "y": 80,
                 "ipaddress": "",
@@ -36,7 +36,7 @@ document.getElementById('importDemo').onclick = function () {
                 }
             },
             {
-                "id": "API Connect",
+                "id": "API Gateway",
                 "x": 620,
                 "y": 80,
                 "ipaddress": "10.0.0.1",
@@ -63,13 +63,13 @@ document.getElementById('importDemo').onclick = function () {
         ],
         "edges": [
             {
-                "from": "1Bank Mobile App",
-                "to": "API Connect",
+                "from": "Mobile App",
+                "to": "API Gateway",
                 "protocol": "https",
                 "port": "443"
             },
             {
-                "from": "API Connect",
+                "from": "API Gateway",
                 "to": "Mobile BFF",
                 "protocol": "https",
                 "port": "443"

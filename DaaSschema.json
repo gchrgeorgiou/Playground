@@ -9,7 +9,7 @@
     {
       "nodes": [
         {
-          "id": "1Bank Mobile App",
+          "id": "Mobile App",
           "x": 290,
           "y": 80,
           "ipaddress": "",
@@ -21,7 +21,7 @@
           }
         },
         {
-          "id": "API Connect",
+          "id": "API Gateway",
           "x": 620,
           "y": 80,
           "ipaddress": "10.0.0.1",
@@ -48,13 +48,13 @@
       ],
       "edges": [
         {
-          "from": "1Bank Mobile App",
-          "to": "API Connect",
+          "from": "Mobile App",
+          "to": "API Gateway",
           "protocol": "https",
           "port": "443"
         },
         {
-          "from": "API Connect",
+          "from": "API Gateway",
           "to": "Mobile BFF",
           "protocol": "https",
           "port": "443"
@@ -76,7 +76,7 @@
       "examples": [
         [
           {
-            "id": "1Bank Mobile App",
+            "id": "Mobile App",
             "x": 290,
             "y": 80,
             "ipaddress": "",
@@ -88,7 +88,7 @@
             }
           },
           {
-            "id": "API Connect",
+            "id": "API Gateway",
             "x": 620,
             "y": 80,
             "ipaddress": "10.0.0.1",
@@ -113,7 +113,7 @@
             "default": {},
             "examples": [
               {
-                "id": "1Bank Mobile App",
+                "id": "Mobile App",
                 "x": 290,
                 "y": 80,
                 "ipaddress": "",
@@ -143,7 +143,7 @@
                 "description": "The name of your node",
                 "default": "",
                 "examples": [
-                  "1Bank Mobile App"
+                  "Mobile App"
                 ]
               },
               "x": {
@@ -249,13 +249,13 @@
       "examples": [
         [
           {
-            "from": "1Bank Mobile App",
-            "to": "API Connect",
+            "from": "Mobile App",
+            "to": "API Gateway",
             "protocol": "https",
             "port": "443"
           },
           {
-            "from": "API Connect",
+            "from": "API Gateway",
             "to": "Mobile BFF",
             "protocol": "https",
             "port": "443"
@@ -274,8 +274,8 @@
             "default": {},
             "examples": [
               {
-                "from": "1Bank Mobile App",
-                "to": "API Connect",
+                "from": "Mobile App",
+                "to": "API Gateway",
                 "protocol": "https",
                 "port": "443"
               }
@@ -294,7 +294,7 @@
                 "description": "Enter the source node for this connection",
                 "default": "",
                 "examples": [
-                  "1Bank Mobile App"
+                  "Mobile App"
                 ]
               },
               "to": {
@@ -304,7 +304,7 @@
                 "description": "Enter the target node for this connection",
                 "default": "",
                 "examples": [
-                  "API Connect"
+                  "API Gateway"
                 ]
               },
               "protocol": {
