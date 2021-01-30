@@ -4,12 +4,17 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
+    <meta name="description" content="DaaS - Diagram As A Service" />
+    <meta name="author" content="George Chr. Georgiou" />
     <title>Dashboard - DaaS</title>
     <link href="css/styles.css" rel="stylesheet" />
     <link href="css/main.css" rel="stylesheet" />
     <script src="js/font-awesome.all.min.js"></script>
+    <style>
+        @import url("js/opt/bootstrap.css");
+        @import url("js/opt/bootstrap-wysihtml5.css");
+        @import url("js/opt/spectrum.css");        
+    </style>
 </head>
 <body class="sb-nav-fixed">
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
@@ -35,11 +40,7 @@
                             Build Data
                         </a>
                     </div>
-                </div>
-                <div class="sb-sidenav-footer">
-                    <div class="small">Logged in as:</div>
-                    Test User
-                </div>
+                </div>                
             </nav>
         </div>
         <div id="layoutSidenav_content">
@@ -56,23 +57,28 @@
                                 </div>
                                 <div>
                                     <br />
-                                    <div class="row-cols-2">
-                                        <div class="col-9 pull-left"><input type="file" id="selectFiles" value="Import" class="form-control form-control-file" /></div>
-                                        <div class="col-3 pull-right"><button id="import" class="btn btn-info">Load data</button></div>
+                                    <div class="row" style="padding-left:12px">
+                                        <div class="col-md-8">                                            
+                                            <input type="file" id="selectFiles" value="Import" class="form-control form-control-file" />
+                                        </div>
+                                        <div class="col-md-4">
+                                            <button id="import" class="btn btn-outline-secondary">Load data</button>
+                                        </div>
                                     </div>
-                                    <p>&nbsp;</p>
+                                    <br />
                                     <div class="row-cols-1">
-                                        <div class="col-9 pull-left">
-                                            <input type="text" id="customChartTitle" class="form-control" placeholder="Enter Chart Title Here" />
+                                        <div class="col-9">
+                                            <label for="customChartTitle">Chart Title:</label>
+                                            <input type="text" id="customChartTitle" name="customChartTitle" class="form-control" placeholder="Enter Chart Title Here" />
                                         </div>
                                     </div>
                                     <p>&nbsp;</p>
                                     <div class="row-cols-1">
-                                        <div class="col-9 pull-left">
+                                        <div class="col-9">
+                                            <label for="cmbChartType">Chart Type:</label>
                                             <select name="cmbChartType" id="cmbChartType" class="form-control">
-                                                <option value="">Select Layout</option>
-                                                <option value="Fixed">Fixed (Defined in data as x,y coordinates)</option>
                                                 <option value="Auto">Auto</option>
+                                                <option value="Fixed">Fixed (Defined in data as x,y coordinates)</option>                                                
                                             </select>
                                         </div>
                                         <p>&nbsp;</p>
@@ -81,7 +87,7 @@
 
                             </div>
                             <!--here-->
-                            <br/><br />
+                            <br /><br />
                             <button class="btn btn-primary" id="loadMore2">Show Diagram</button>
                             <!--end here-->
                         </div>
@@ -91,11 +97,22 @@
                                     <i class="fas fa-table mr-1"></i>
                                     Data
                                 </div>
-                                <button id="importDemo" class="btn btn-info btn-xs" style="width:250px">Demo Data</button><br />
-                                <textarea id="result" class="form-control" rows="10" style="height:100%;width:100%"></textarea>
+                                <br />
+                                <div class="row-cols-1">
+                                    <div class="col-9 pull-left">
+                                        <button id="importDemo" class="btn btn-secondary" style="width:150px">Demo Data</button>
+                                    </div>
+                                </div>
+                                <br />
+                                <div class="row-cols-1">
+                                    <div class="col-12">
+                                        <textarea id="result" class="form-control" rows="10" style="height:100%;width:100%"></textarea>
+                                    </div>
+                                </div>
+                                <br />
+                                <!--here-->
+                                <!--end here-->
                             </div>
-                            <!--here-->
-                            <!--end here-->
                         </div>
                     </div>
                     <br />
