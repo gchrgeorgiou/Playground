@@ -98,6 +98,7 @@
     <Content Include="backup\401.html" />
     <Content Include="backup\404.html" />
     <Content Include="backup\500.html" />
+    <Content Include="genericform.html" />
     <Content Include="build.html" />
     <Content Include="js\img\glyphicons-halflings.png" />
     <Content Include="js\fonts\glyphicons-halflings-regular.svg" />
@@ -125,6 +126,7 @@
     <Content Include="js\jsonform.js" />
     <Content Include="js\jsv.js" />
     <Content Include="js\npm.js" />
+    <Content Include="js\genericform.js" />
     <Content Include="js\playground.js" />
     <Content Include="js\underscore.js" />
     <Content Include="js\utils.js" />
