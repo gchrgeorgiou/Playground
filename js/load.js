@@ -18,8 +18,11 @@ document.getElementById("loadMore").onclick = function () {
     var jsonpath = "data/" + selection.value;
     var chartTitle = selection.options[selection.selectedIndex].text;
 
+    
+
+
     anychart.data.loadJsonFile(jsonpath, function (data) {
         //console.log(data);
-        drawChart(chartTitle, data);
+        drawChart(chartTitle, data,"Fixed");
     });
 };

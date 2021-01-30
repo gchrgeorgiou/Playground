@@ -1,10 +1,10 @@
-﻿function drawChart(chartTitle, JsonData) {
+﻿function drawChart(chartTitle, JsonData,chartType) {
     console.log("You are in with:" + JsonData);
     // create a chart from the loaded data
     var chart = anychart.graph(JsonData);
 
     //set fixed layout and use xy coordinates for each node
-    chart.layout().type('fixed');
+   
 
     // set the title
     chart.title(chartTitle);
@@ -53,8 +53,15 @@
 
 
     // draw the chart
-    //chart.rotation(180);
-    chart.layout().iterationCount(500);
+    
+    if (chartType == 'Fixed') {        
+        chart.layout().type('fixed');
+        console.log("it was fixed");
+    } else {
+        chart.rotation(180);
+        console.log("it was not fixed");
+        chart.layout().iterationCount(500);
+    }
     chart.container("graphplaceholder").draw();
     chart.fit();
 

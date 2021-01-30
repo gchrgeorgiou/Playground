@@ -90,7 +90,9 @@ document.getElementById("loadMore2").onclick = function () {
     var chartTitle = document.getElementById("customChartTitle").value;
     var formatted = document.getElementById('result').value;
     var obj = JSON.parse(formatted);
-    drawChart(chartTitle, obj);
+    var selection = document.getElementById('cmbChartType');
+    var charttype = selection.value;    
+    drawChart(chartTitle, obj,charttype);
 };
 
 

@@ -10,6 +10,54 @@
     <link href="css/styles.css" rel="stylesheet" />
     <link href="css/main.css" rel="stylesheet" />
     <script src="js/font-awesome.all.min.js"></script>
+    <style>
+        @import url("js/opt/bootstrap.css");
+        @import url("js/opt/bootstrap-wysihtml5.css");
+        @import url("js/opt/spectrum.css");
+
+        h2 {
+            font-weight: 200;
+            margin-top: 0;
+        }
+
+        .tagline {
+            padding: 10px;
+            font-weight: 200;
+            margin-top: -1em;
+        }
+
+
+
+        #form .add-on {
+            border: none;
+            background-color: inherit;
+        }
+
+        .expandable > legend:before {
+            content: '\25B8';
+            padding-right: 5px;
+        }
+
+        .expanded > legend:before {
+            content: '\25BE';
+        }
+
+        ._jsonform-array-buttons {
+            margin-left: 25px;
+        }
+
+        .jsonform-required > label:after {
+            content: ' *';
+            color: red;
+        }
+
+        form.jsonform-hasrequired:after {
+            content: '* Required field';
+            display: block;
+            color: red;
+            padding-top: 1em;
+        }
+    </style>
 </head>
 <body class="sb-nav-fixed">
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
@@ -32,7 +80,7 @@
                         </a>
                         <a class="nav-link" href="build.html">
                             <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
-                            Build Diagram
+                            Build Data
                         </a>
                     </div>
                 </div>
@@ -44,56 +92,28 @@
                 <div class="container-fluid">
                     <h1 class="mt-4">DaaS Playground</h1>
                     <br />
+
                     <div class="row">
-                        <div class="col-xl-5">
-                            <div class="card">
-                                <div class="card-header">
-                                    <i class="fas fa-table mr-1"></i>
-                                    Configuration
-                                </div>
-                                <div>
-
-                                    <button id="importDemo" class="btn btn-danger">Demo Data</button>
-                                    <button class="btn btn-primary" id="loadMore2" disabled>Show Diagram</button>
-                                    <br /><br />
-                                    <input type="text" id="customChartTitle" class="form-control" placeholder="Enter Chart Title Here" /><br />
-                                    <br />
-                                </div>
-
-                                <form></form>
-                                <div id="res" class="alert"></div>
-
-
-
-                            </div>
-                            <!--here-->
-                            <!--end here-->
-                        </div>
-                        <div class="col-xl-7">
-                            <div class="card">
-                                <div class="card-header">
-                                    <i class="fas fa-table mr-1"></i>
-                                    Data
-                                </div>
-                                <textarea id="result" class="form-control" rows="10" style="height:100%;width:100%"></textarea>
-                            </div>
-                            <!--here-->
-                            <!--end here-->
+                        <div class="col-md-0" style="display:none">
+                            <form id="form" class="form-vertical"></form>
                         </div>
                     </div>
-                    <br />
-                    <div class="row" style="height:768px">
-                        <div class="card" style="width:100%;height:100%">
-                            <div class="card-header">
-                                <i class="fas fa-table mr-1"></i>
-                                Diagram
-                            </div>
-                            <div id="graphplaceholder" style="width:100%;height:100%">
-
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="col-sm-12">
+                                <div id="result" class="well" style="height:100%;width:100%">(please wait)</div>
+                                <!--<div id="resultjson" class="well" style="height:100%;width:100%"></div>-->
                             </div>
                         </div>
-                    </div>
+                        <div class="col-6">
+                            <div class="col-sm-12">
+                                <div id="resultjson" class="well" style="height:100%;width:100%"></div>
+                            </div>
+                        </div>
+                    </div>                    
                 </div>
+
+
             </main>
             <footer class="py-4 bg-light mt-auto">
                 <div class="container-fluid">
@@ -109,46 +129,37 @@
             </footer>
         </div>
     </div>
-    <script src="js/jquery-3.5.1.slim.min.js"></script>
-    <script src="js/underscore.js"></script>
-    <script src="js/jsv.js"></script>
-    <script src="js/jsonform.js"></script>
-    <script type="text/javascript">
-        $('form').jsonForm({
-            schema: {
-                name: {
-                    type: 'string',
-                    title: 'Name',
-                    required: true
-                },
-                age: {
-                    type: 'number',
-                    title: 'Age'
-                }
-            },
-            onSubmit: function (errors, values) {
-                if (errors) {
-                    $('#res').html('<p>I beg your pardon?</p>');
-                }
-                else {
-                    $('#res').html('<p>Hello ' + values.name + '.' +
-                        (values.age ? '<br/>You are ' + values.age + '.' : '') +
-                        '</p>');
-                }
-            }
-        });
-    </script>
+    <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/anychart-core.min.js"></script>
     <script src="js/anychart-graph.min.js"></script>
     <script src="js/anychart-data-adapter.min.js"></script>
-
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/daas.js"></script>
     <script src="js/scripts.js"></script>
-    <script src="js/build.js"></script>
+
     <script src="js/jquery.validate.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.bootstrap.wizard.min.js"></script>
     <script src="js/global.js"></script>
+
+
+
+    <script src="js/underscore.js"></script>
+    <script src="js/opt/jsv.js"></script>
+    <script src="js/opt/jquery-ui.js"></script>
+    <script src="js/opt/bootstrap-dropdown.js"></script>
+    <script src="js/opt/bootstrap-wysihtml5.js"></script>
+    <script src="js/opt/spectrum.js"></script>
+    <script src="js/opt/ace/ace.js"></script>
+    <script src="js/opt/ace/mode-json.js"></script>
+    <script src="js/opt/ace/mode-html.js"></script>
+    <script src="js/opt/ace/mode-css.js"></script>
+    <script src="js/opt/ace/mode-javascript.js"></script>
+    <script src="js/opt/ace/mode-less.js"></script>
+    <script src="js/opt/ace/mode-markdown.js"></script>
+    <script src="js/opt/jquery.transloadit2.js"></script>
+    <script src="js/jsonform.js"></script>
+    <script src="js/playground.js"></script>
+
 </body>
 </html>

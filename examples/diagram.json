@@ -1,0 +1,165 @@
+{
+  "schema": {
+    "nodes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "title": "Node",
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Name",
+            "description": "The name of your node",
+            "default": "",
+            "examples": [
+              "Mobile App",
+              "API Gateway",
+              "IIB"
+            ],
+            "required": true
+          },
+          "x": {
+            "type": "integer",
+            "title": "The x coordinate",
+            "description": "Optionally set the x coordinate of the node",
+            "default": 0,
+            "required": false,
+            "examples": [
+              290
+            ]
+          },
+          "y": {
+            "type": "integer",
+            "title": "The Y coordinate",
+            "description": "Optionally set the y coordinate of the node",
+            "default": 0,
+            "required": false,
+            "examples": [
+              80
+            ]
+          },
+          "ipaddress": {
+            "type": "string",
+            "title": "Ip Address",
+            "required": false,
+            "default": "10.0.0.xxx"
+          },
+
+          "height": {
+            "type": "integer",
+            "title": "Height",
+            "description": "Define the height in pixels",
+            "required": false,
+            "default": 50,
+            "examples": [
+              75
+            ]
+          },
+          "width": {
+            "type": "integer",
+            "title": "Width",
+            "description": "Define the width in pixels",
+            "required": false,
+            "default": 75,
+            "examples": [
+              75
+            ]
+          },
+          "fill": {
+            "type": "object",
+            "title": "Fill method",
+            "description": "Define the image to show",
+            "default": {},
+            "required": false,
+            "properties": {
+              "src": {
+                "type": "string",
+                "title": "Icon path",
+                "description": "Enter the icon path for this node",
+                "default": "../img/apigw.png",
+                "required": false
+              }
+            }
+          }
+        }
+      }
+    },
+
+    "edges": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "title": "Edge",
+        "properties": {
+          "from": {
+            "type": "string",
+            "title": "Source Node",
+            "required": true,
+            "description": "Enter the source node for this connection",
+            "default": "",
+            "examples": [
+              "Mobile App"
+            ]
+          },
+          "to": {
+            "type": "string",
+            "title": "Target Node",
+            "required": true,
+            "description": "Enter the target node for this connection",
+            "default": "",
+            "examples": [
+              "API Gateway"
+            ]
+          },
+          "protocol": {
+            "type": "string",
+            "title": "Protocol",
+            "required": true,
+            "description": "Choose Protocol for this connection",
+            "default": "",
+            "enum": ["https","mq","other"]
+          },
+          "port": {           
+            "type": "string",
+            "title": "Port",
+            "description": "Enter the port number for this connection",
+            "default": "",
+            "examples": [
+              "443"
+            ]
+          }
+        }
+      }
+    }
+  },
+
+  "form": [
+
+    {
+      "type": "fieldset",
+      "title": "Nodes",
+      "expandable": true,
+      "items": [
+        "nodes"
+      ]
+    },
+    {
+      "type": "fieldset",
+      "title": "Edges",
+      "expandable": true,
+      "items": [
+        "edges"
+      ]
+    },
+
+  
+    {
+      "type": "submit",
+      "title": "Get JSON data"
+    }
+  ]
+
+
+
+
+}
