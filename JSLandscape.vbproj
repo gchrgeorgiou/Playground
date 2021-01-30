@@ -260,7 +260,7 @@
     <Content Include="js\opt\jsv.js" />
     <Content Include="js\opt\spectrum.css" />
     <Content Include="js\opt\spectrum.js" />
-    <Content Include="w.html" />
+    <Content Include="backup\w.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
