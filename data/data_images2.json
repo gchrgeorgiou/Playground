@@ -9,7 +9,7 @@
       "width": 75,
       "group": "System of Engagement",
       "fill": {
-        "src": "../img/mobileApp.png"
+        "src": "img/mobileApp.png"
       }
     },
     {
@@ -21,7 +21,7 @@
       "width": 75,
       "group": "Middleware",
       "fill": {
-        "src": "../img/apigw.png"
+        "src": "img/apigw.png"
       }
     },
     {
@@ -33,7 +33,7 @@
       "width": 75,
       "group": "Containers",
       "fill": {
-        "src": "../img/bff.png"
+        "src": "img/bff.png"
       }
     }
    

@@ -76,7 +76,18 @@
                 "type": "string",
                 "title": "Icon path",
                 "description": "Enter the icon path for this node",
-                "default": "../img/apigw.png",
+                "default": "img/apigw.png",
+                "enum": [
+                  "img/apigw.png",
+                  "img/bff.png",
+                  "img/cards.png",
+                  "img/core.png",
+                  "img/jboss.png",
+                  "img/microservices.png",
+                  "img/mobileApp.png",
+                  "img/mongo.png",
+                  "img/server.png", 
+                  "img/iib.png" ],
                 "required": false
               }
             }
@@ -139,9 +150,8 @@
       "type": "fieldset",
       "title": "Nodes",
       "expandable": true,
-      "items": [
-        "nodes"
-      ]
+      "items": [ "nodes" ]
+      
     },
     {
       "type": "fieldset",
@@ -152,7 +162,7 @@
       ]
     },
 
-  
+
     {
       "type": "submit",
       "title": "Get JSON data"
