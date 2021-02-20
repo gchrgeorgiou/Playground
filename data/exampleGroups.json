@@ -1,0 +1,435 @@
+﻿{
+  "nodes": [
+    {
+      "id": 1,
+      "x": 90.728697754922,
+      "y": 295.9703525848451,
+      "group": "server"
+    },
+    {
+      "id": 2,
+      "x": 243.13491411837117,
+      "y": 295.9703525848451,
+      "group": "break"
+    },
+    {
+      "id": 3,
+      "x": 334.5832720018478,
+      "y": 295.9703525848451,
+      "group": "router"
+    },
+    {
+      "id": 4,
+      "x": 428.6354973031684,
+      "y": 295.9703525848451,
+      "group": "break"
+    },
+    {
+      "id": 5,
+      "x": 428.6354973031684,
+      "y": 362.7628438960961,
+      "group": "break"
+    },
+    {
+      "id": 6,
+      "x": 494.6968916911633,
+      "y": 362.7628438960961,
+      "group": "internet"
+    },
+    {
+      "id": 7,
+      "x": 567.5762701999616,
+      "y": 362.7628438960961,
+      "group": "break"
+    },
+    {
+      "id": 8,
+      "x": 567.5762701999616,
+      "y": 295.9703525848451,
+      "group": "break"
+    },
+    {
+      "id": 9,
+      "x": 627.5,
+      "y": 295.9703525848451,
+      "group": "cloud"
+    },
+    {
+      "id": 10,
+      "x": 240.24015248425462,
+      "y": 488.82771027519044,
+      "group": "switch"
+    },
+    {
+      "id": 11,
+      "x": 194.12146515182326,
+      "y": 489.6547850277951,
+      "group": "break"
+    },
+    {
+      "id": 12,
+      "x": 220.41503317835378,
+      "y": 489.6547850277951,
+      "group": "break"
+    },
+    {
+      "id": 13,
+      "x": 259.3992506835598,
+      "y": 489.6547850277951,
+      "group": "break"
+    },
+    {
+      "id": 14,
+      "x": 271.8665589739803,
+      "y": 489.6547850277951,
+      "group": "break"
+    },
+    {
+      "id": 15,
+      "x": 284.831475450452,
+      "y": 489.6547850277951,
+      "group": "break"
+    },
+    {
+      "id": 16,
+      "x": 194.12146515182326,
+      "y": 522.6168665048785,
+      "group": "break"
+    },
+    {
+      "id": 17,
+      "x": 42.5,
+      "y": 522.6168665048785,
+      "group": "break"
+    },
+    {
+      "id": 18,
+      "x": 42.5,
+      "y": 635.0296474151548,
+      "group": "printer"
+    },
+    {
+      "id": 19,
+      "x": 220.41503317835378,
+      "y": 555.1538565970427,
+      "group": "break"
+    },
+    {
+      "id": 20,
+      "x": 156.24549418285108,
+      "y": 555.1538565970427,
+      "group": "break"
+    },
+    {
+      "id": 21,
+      "x": 156.24549418285108,
+      "y": 635.0296474151548,
+      "group": "mobile"
+    },
+    {
+      "id": 22,
+      "x": 259.3992506835598,
+      "y": 555.1538565970427,
+      "group": "break"
+    },
+    {
+      "id": 23,
+      "x": 271.8665589739803,
+      "y": 555.1538565970427,
+      "group": "break"
+    },
+    {
+      "id": 24,
+      "x": 284.831475450452,
+      "y": 555.1538565970427,
+      "group": "break"
+    },
+    {
+      "id": 25,
+      "x": 425.9393758962275,
+      "y": 555.1538565970427,
+      "group": "break"
+    },
+    {
+      "id": 26,
+      "x": 487.32908102668466,
+      "y": 555.1538565970427,
+      "group": "break"
+    },
+    {
+      "id": 27,
+      "x": 556.7255644144004,
+      "y": 555.1538565970427,
+      "group": "break"
+    },
+    {
+      "id": 28,
+      "x": 425.9393758962275,
+      "y": 635.0296474151548,
+      "group": "pc"
+    },
+    {
+      "id": 29,
+      "x": 487.32908102668466,
+      "y": 635.0296474151548,
+      "group": "pc"
+    },
+    {
+      "id": 30,
+      "x": 556.7255644144004,
+      "y": 635.0296474151548,
+      "group": "pc"
+    }
+  ],
+  "edges": [
+    {
+      "from": 1,
+      "to": 3
+    },
+    {
+      "from": 3,
+      "to": 4
+    },
+    {
+      "from": 4,
+      "to": 5
+    },
+    {
+      "from": 5,
+      "to": 6
+    },
+    {
+      "from": 6,
+      "to": 7
+    },
+    {
+      "from": 7,
+      "to": 8
+    },
+    {
+      "from": 8,
+      "to": 9
+    },
+    {
+      "from": 2,
+      "to": 10
+    },
+    {
+      "from": 2,
+      "to": 3
+    },
+    {
+      "from": 10,
+      "to": 11
+    },
+    {
+      "from": 10,
+      "to": 12
+    },
+    {
+      "from": 10,
+      "to": 13
+    },
+    {
+      "from": 10,
+      "to": 14
+    },
+    {
+      "from": 10,
+      "to": 15
+    },
+    {
+      "from": 11,
+      "to": 16
+    },
+    {
+      "from": 16,
+      "to": 17
+    },
+    {
+      "from": 17,
+      "to": 18
+    },
+    {
+      "from": 12,
+      "to": 19
+    },
+    {
+      "from": 19,
+      "to": 20
+    },
+    {
+      "from": 20,
+      "to": 21
+    },
+    {
+      "from": 13,
+      "to": 22
+    },
+    {
+      "from": 14,
+      "to": 23
+    },
+    {
+      "from": 15,
+      "to": 24
+    },
+    {
+      "from": 22,
+      "to": 25
+    },
+    {
+      "from": 25,
+      "to": 28
+    },
+    {
+      "from": 23,
+      "to": 26
+    },
+    {
+      "from": 26,
+      "to": 29
+    },
+    {
+      "from": 24,
+      "to": 27
+    },
+    {
+      "from": 27,
+      "to": 30
+    }
+  ],
+  "groups": [
+    {
+      "id": "server",
+      "settings": {
+        "normal": {
+          "fill": {
+            "src": "https://cdn.anychart.com/samples-data/graph/network-graph/server.svg",
+            "mode": "fit",
+            "opacity": 1
+          },
+          "stroke": "none",
+          "shape": "square",
+          "height": 70
+        }
+      }
+    },
+    {
+      "id": "break",
+      "settings": {
+        "normal": {
+          "stroke": "none",
+          "height": 0
+        }
+      }
+    },
+    {
+      "id": "router",
+      "settings": {
+        "normal": {
+          "fill": {
+            "src": "https://cdn.anychart.com/samples-data/graph/network-graph/router.svg",
+            "mode": "fit",
+            "opacity": 1
+          },
+          "stroke": "none",
+          "shape": "square",
+          "height": 70
+        }
+      }
+    },
+    {
+      "id": "internet",
+      "settings": {
+        "normal": {
+          "fill": {
+            "src": "https://cdn.anychart.com/samples-data/graph/network-graph/isp.svg",
+            "mode": "fit",
+            "opacity": 1
+          },
+          "stroke": "none",
+          "shape": "square",
+          "height": 60
+        }
+      }
+    },
+    {
+      "id": "cloud",
+      "settings": {
+        "normal": {
+          "fill": {
+            "src": "https://cdn.anychart.com/samples-data/graph/network-graph/cloud-server.png",
+            "mode": "fit",
+            "opacity": 1
+          },
+          "stroke": "none",
+          "shape": "square",
+          "height": 60
+        }
+      }
+    },
+    {
+      "id": "switch",
+      "settings": {
+        "normal": {
+          "fill": {
+            "src": "https://cdn.anychart.com/samples-data/graph/network-graph/switch.svg",
+            "mode": "fit",
+            "opacity": 1
+          },
+          "stroke": "none",
+          "shape": "rectangle",
+          "width": 120,
+          "height": 40
+        }
+      }
+    },
+    {
+      "id": "printer",
+      "settings": {
+        "normal": {
+          "fill": {
+            "src": "https://cdn.anychart.com/samples-data/graph/network-graph/printer.svg",
+            "mode": "fit",
+            "opacity": 1
+          },
+          "stroke": "none",
+          "shape": "square",
+          "height": 50
+        }
+      }
+    },
+    {
+      "id": "mobile",
+      "settings": {
+        "normal": {
+          "fill": {
+            "src": "https://cdn.anychart.com/samples-data/graph/network-graph/mobile.svg",
+            "mode": "fit",
+            "opacity": 1
+          },
+          "stroke": "none",
+          "shape": "square",
+          "height": 60
+        }
+      }
+    },
+    {
+      "id": "pc",
+      "settings": {
+        "normal": {
+          "fill": {
+            "src": "https://cdn.anychart.com/samples-data/graph/network-graph/pc.svg",
+            "mode": "fit",
+            "opacity": 1
+          },
+          "stroke": "none",
+          "shape": "rectangle",
+          "width": 45,
+          "height": 45
+        }
+      }
+    }
+  ]
+}

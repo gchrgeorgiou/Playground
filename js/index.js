@@ -15,7 +15,7 @@ document.getElementById('import').onclick = function () {
         document.getElementById('result').value = formatted;
     }
     fr.readAsText(files.item(0));
-    document.getElementById("loadMore2").disabled = false;
+    document.getElementById("btnShowDiagram").disabled = false;
 };
 
 
@@ -78,23 +78,36 @@ document.getElementById('importDemo').onclick = function () {
     };
     var formatted = JSON.stringify(result, null, 2);
     document.getElementById('result').value = formatted;
-    document.getElementById("loadMore2").disabled = false;
+    document.getElementById("btnShowDiagram").disabled = false;
 };
 
 
 
-
-
-document.getElementById("loadMore2").onclick = function () {
+document.getElementById("btnShowDiagram").onclick = function () {
     document.getElementById("graphplaceholder").innerHTML = "";
     var chartTitle = document.getElementById("customChartTitle").value;
     var formatted = document.getElementById('result').value;
     var obj = JSON.parse(formatted);
     var selection = document.getElementById('cmbChartType');
     var charttype = selection.value;    
-    drawChart(chartTitle, obj,charttype);
+    drawChart(chartTitle, obj, charttype);
+    if (empty(chartTitle)) { chartTitle = "Untitled" };    
+    localStorage.setItem(chartTitle + " (Current Session)", formatted);
 };
 
 
 
 
+function empty(e) {
+    switch (e) {
+        case "":
+        case 0:
+        case "0":
+        case null:
+        case false:
+        case typeof (e) == "undefined":
+            return true;
+        default:
+            return false;
+    }
+}

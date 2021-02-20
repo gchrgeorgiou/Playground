@@ -7,7 +7,7 @@
       "ipaddress": "",
       "height": 75,
       "width": 75,
-      "group": "System of Engagement",
+      "group": "mobile",
       "fill": {
         "src": "img/mobileApp.png"
       }
@@ -19,7 +19,7 @@
       "ipaddress": "10.0.0.1",
       "height": 50,
       "width": 75,
-      "group": "Middleware",
+      "group": "switch",
       "fill": {
         "src": "img/apigw.png"
       }
@@ -31,7 +31,7 @@
       "ipaddress": "10.0.0.2",
       "height": 75,
       "width": 75,
-      "group": "Containers",
+      "group": "cloud",
       "fill": {
         "src": "img/bff.png"
       }

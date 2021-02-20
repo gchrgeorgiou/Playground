@@ -3,6 +3,7 @@
     // create a chart from the loaded data
     var chart = anychart.graph(JsonData);
 
+
     //set fixed layout and use xy coordinates for each node
    
 
@@ -50,6 +51,115 @@
     // background color
     chart.tooltip().background().fill("#663399");
     nodes.tooltip().background().fill("black");
+
+
+    //try magic here
+    // set node labels text formatter
+    chart
+        .nodes()
+        .labels()
+        .format(function () {
+            var text = this.getData('group');
+            if (text !== 'break') {
+                return this.getData('group');
+            }
+            return '';
+        });
+
+    //// set line breaks group nodes settings
+    //var breakGroup = chart.group('break');
+    //breakGroup.height(0);
+    //breakGroup.stroke('none');
+
+    //// set pc group nodes settings
+    //var pcGroup = chart.group('pc');
+    //pcGroup.fill({
+    //    src:
+    //        'https://cdn.anychart.com/samples-data/graph/network-graph/pc.svg',
+    //    mode: 'fit'
+    //});
+    //pcGroup.shape('rectangle');
+    //pcGroup.stroke('none');
+    //pcGroup.width(45);
+    //pcGroup.height(45);
+
+    //// set pc group nodes settings
+    //var routerGroup = chart.group('router');
+    //routerGroup.fill({
+    //    src:
+    //        'https://cdn.anychart.com/samples-data/graph/network-graph/router.svg',
+    //    mode: 'fit'
+    //});
+    //routerGroup.height(70);
+    //routerGroup.shape('square');
+    //routerGroup.stroke('none');
+
+    //// set internet group nodes settings
+    //var internetGroup = chart.group('internet');
+    //internetGroup.height(60);
+    //internetGroup.shape('square');
+    //internetGroup.stroke('none');
+    //internetGroup.fill({
+    //    src:
+    //        'https://cdn.anychart.com/samples-data/graph/network-graph/isp.svg',
+    //    mode: 'fit'
+    //});
+
+    // set cloud group nodes settings
+    //var cloudGroud = chart.group('cloud');
+    //cloudGroud.height(60);
+    //cloudGroud.shape('square');
+    //cloudGroud.stroke('none');
+    //cloudGroud.fill({
+    //    src:
+    //        'https://cdn.anychart.com/samples-data/graph/network-graph/cloud-server.png',
+    //    mode: 'fit'
+    //});
+
+    //// set switch group nodes settings
+    //var switchGroup = chart.group('switch');
+    //switchGroup.shape('rectangle');
+    //switchGroup.width(120);
+    //switchGroup.height(40);
+    //switchGroup.stroke('none');
+    //switchGroup.fill({
+    //    src:
+    //        'https://cdn.anychart.com/samples-data/graph/network-graph/switch.svg',
+    //    mode: 'fit'
+    //});
+
+    //// set server group nodes settings
+    //var serverGroup = chart.group('server');
+    //serverGroup.shape('square');
+    //serverGroup.height(70);
+    //serverGroup.stroke('none');
+    //serverGroup.fill({
+    //    src:
+    //        'https://cdn.anychart.com/samples-data/graph/network-graph/server.svg',
+    //    mode: 'fit'
+    //});
+
+    //// set printer group nodes settings
+    //var printerGroup = chart.group('printer');
+    //printerGroup.shape('square');
+    //printerGroup.height(50);
+    //printerGroup.stroke('none');
+    //printerGroup.fill({
+    //    src:
+    //        'https://cdn.anychart.com/samples-data/graph/network-graph/printer.svg',
+    //    mode: 'fit'
+    //});
+
+    //// set mobile group nodes settings
+    //var mobileGroup = chart.group('mobile');
+    //mobileGroup.shape('square');
+    //mobileGroup.height(60);
+    //mobileGroup.stroke('none');
+    //mobileGroup.fill({
+    //    src:
+    //        'https://cdn.anychart.com/samples-data/graph/network-graph/mobile.svg',
+    //    mode: 'fit'
+    //});
 
 
     // draw the chart

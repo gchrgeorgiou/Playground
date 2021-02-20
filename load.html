@@ -9,6 +9,8 @@
     <title>Dashboard - DaaS</title>
     <link href="css/styles.css" rel="stylesheet" />
     <link href="css/main.css" rel="stylesheet" />
+    <link href="https://cdn.anychart.com/releases/v8/css/anychart-ui.min.css" type="text/css" rel="stylesheet">
+    <link href="https://cdn.anychart.com/releases/v8/fonts/css/anychart-font.min.css" type="text/css" rel="stylesheet">
     <script src="js/font-awesome.all.min.js"></script>
     <style>
         @import url("js/opt/bootstrap.css");
@@ -58,8 +60,8 @@
                                 <label for="cmbDiagram">Select a diagram to load</label>
                                 <select name="cmbDiagram" id="cmbDiagram" class="form-control">
                                     <option value="">Select Diagram</option>
-                                    <option value="data_images.json">Network Graph showing the IT Landscape - Mobile App Flow</option>
-                                    <option value="data_images2.json">Test Diagram 2</option>
+                                    <option value="data_images.json">Mobile App Flow (Preloaded)</option>
+                                    <option value="data_images2.json">Hybrid (Preloaded)</option>                                    
                                 </select>
                             </div>
                         </div>
@@ -93,9 +95,11 @@
             </footer>
         </div>
     </div>
-    <script src="js/anychart-core.min.js"></script>
-    <script src="js/anychart-graph.min.js"></script>
-    <script src="js/anychart-data-adapter.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-base.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-graph.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-data-adapter.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-ui.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-exports.min.js"></script>
     <script src="js/jquery-3.5.1.slim.min.js"></script>
     <script src="js/daas.js"></script>
     <script src="js/scripts.js"></script>

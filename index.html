@@ -62,7 +62,7 @@
                                 <div>
                                     <br />
                                     <div class="row" style="padding-left:12px">
-                                        <div class="col-md-8">                                            
+                                        <div class="col-md-8">
                                             <input type="file" id="selectFiles" value="Import" class="form-control form-control-file" />
                                         </div>
                                         <div class="col-md-4">
@@ -73,7 +73,7 @@
                                     <div class="row-cols-1">
                                         <div class="col-9">
                                             <label for="customChartTitle">Chart Title:</label>
-                                            <input type="text" id="customChartTitle" name="customChartTitle" class="form-control" placeholder="Enter Chart Title Here" />
+                                            <input type="text" id="customChartTitle" name="customChartTitle" class="form-control" placeholder="Enter Chart Title Here" required/>
                                         </div>
                                     </div>
                                     <p>&nbsp;</p>
@@ -82,7 +82,7 @@
                                             <label for="cmbChartType">Chart Type:</label>
                                             <select name="cmbChartType" id="cmbChartType" class="form-control">
                                                 <option value="Auto">Auto</option>
-                                                <option value="Fixed">Fixed (Defined in data as x,y coordinates)</option>                                                
+                                                <option value="Fixed">Fixed (Defined in data as x,y coordinates)</option>
                                             </select>
                                         </div>
                                         <p>&nbsp;</p>
@@ -92,7 +92,7 @@
                             </div>
                             <!--here-->
                             <br /><br />
-                            <button class="btn btn-primary" id="loadMore2">Show Diagram</button>
+                            <button class="btn btn-primary" id="btnShowDiagram" disabled>Show Diagram</button>                            
                             <!--end here-->
                         </div>
                         <div class="col-xl-7">

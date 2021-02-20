@@ -100,6 +100,7 @@
     <Content Include="backup\500.html" />
     <Content Include="genericform.html" />
     <Content Include="build.html" />
+    <Content Include="groups.html" />
     <Content Include="js\img\glyphicons-halflings.png" />
     <Content Include="js\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="js\bootlint.js" />
@@ -227,6 +228,8 @@
     <Content Include="examples\templating-value.json" />
     <Content Include="examples\templating-values.json" />
     <Content Include="examples\diagram.json" />
+    <Content Include="data\exampleGroups.json" />
+    <Content Include="data\exampleGroups - Copy.json" />
     <None Include="js\jquery-3.5.1.intellisense.js" />
     <Content Include="js\jquery-3.5.1.js" />
     <Content Include="js\jquery-3.5.1.min.js" />
